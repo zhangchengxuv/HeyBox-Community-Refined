@@ -1,0 +1,27 @@
+/* Shared visual tokens. Scoped to the extension state so disabling restores the site. */
+html.hcr-enabled {
+  --hcr-page-bg: #f6f7f9;
+  --hcr-canvas: var(--hcr-page-bg);
+  --hcr-surface: #ffffff;
+  --hcr-surface-hover: #f8fafb;
+  --hcr-surface-selected: #f1f4f7;
+  --hcr-border-color: #e6e9ed;
+  --hcr-border: var(--hcr-border-color);
+  --hcr-border-strong: #d9dee5;
+  --hcr-text: #20242b;
+  --hcr-text-muted: #6b7480;
+  --hcr-text-subtle: #9199a4;
+  --hcr-radius-panel: 12px;
+  --hcr-radius-card: 10px;
+  --hcr-radius-control: 8px;
+  --hcr-radius-small: 6px;
+  --hcr-shadow-card: 0 1px 3px rgb(20 25 35 / 3.5%);
+  --hcr-shadow-card-hover: 0 2px 6px rgb(20 25 35 / 5%);
+  --hcr-shadow-floating: 0 2px 8px rgb(20 25 35 / 10%);
+  --hcr-shadow-floating-hover: 0 4px 12px rgb(20 25 35 / 14%);
+  /* One desktop shell for both supported routes. Individual content blocks
+   * retain their own readable measure; this only removes unused outer canvas. */
+  --hcr-layout-max: 1520px;
+  --hcr-layout-gap: 18px;
+  --hcr-right-width: 300px;
+}

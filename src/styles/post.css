@@ -1,0 +1,72 @@
+/* Post presentation only. Structural sizing is centralized in v05.css. */
+@media (min-width: 1081px) {
+  html.hcr-enabled.hcr-post #page-bbs-link > .content > .list {
+    border: 1px solid var(--hcr-border-color);
+    border-radius: var(--hcr-radius-panel);
+    background: var(--hcr-surface);
+    box-shadow: var(--hcr-shadow-card);
+  }
+
+  /* Keep Swiper geometry native: this constrains only the outer stage. */
+  html.hcr-enabled.hcr-post #page-bbs-link .image-text__header-image {
+    max-width: min(820px, 100%);
+    margin-inline: auto;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .image-text__container {
+    padding: 18px 24px 24px;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .link-section-title {
+    color: var(--hcr-text);
+    font-size: 22px;
+    font-weight: 650;
+    line-height: 1.45;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .image-text__content {
+    max-width: 800px;
+    color: var(--hcr-text-muted);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .link-comment {
+    margin-top: 14px;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .link-comment__comment-item {
+    padding-block: 12px;
+    border-bottom: 1px solid var(--hcr-border);
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .comment-item__content-container {
+    color: var(--hcr-text-muted);
+    line-height: 1.65;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .link-comment__comment-children {
+    border: 1px solid var(--hcr-border-color);
+    border-radius: var(--hcr-radius-control);
+    background: var(--hcr-canvas);
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .bbs-link__related-recommend {
+    border: 1px solid var(--hcr-border-color);
+    border-radius: var(--hcr-radius-panel);
+    background: var(--hcr-surface);
+    box-shadow: var(--hcr-shadow-card);
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .link-reply__main-box {
+    border: 1px solid var(--hcr-border-color);
+    border-radius: var(--hcr-radius-control);
+    background: var(--hcr-surface);
+    box-shadow: none;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link .link-reply__operation-item,
+  html.hcr-enabled.hcr-post #page-bbs-link .hot-topic__look {
+    border-radius: var(--hcr-radius-control);
+  }
+}

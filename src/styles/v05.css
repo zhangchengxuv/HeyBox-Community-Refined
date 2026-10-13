@@ -1,0 +1,285 @@
+/* v0.5.1 canonical layout. Older version files no longer define page grids. */
+
+@media (min-width: 840px) {
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community {
+    --hcr-dock-width: 200px;
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: var(--hcr-layout-max);
+    margin-inline: auto;
+    padding-block: 16px 28px;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock.hcr-dock-collapsed #page-bbs-community {
+    --hcr-dock-width: 60px;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community > .bbs-community__search-module {
+    box-sizing: border-box;
+    width: calc(100% - var(--hcr-dock-width) - var(--hcr-layout-gap));
+    margin: 0 0 16px calc(var(--hcr-dock-width) + var(--hcr-layout-gap));
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community > .content {
+    display: grid;
+    grid-template-columns: var(--hcr-dock-width) minmax(0, 1fr) var(--hcr-right-width);
+    grid-template-rows: minmax(0, 1fr);
+    gap: var(--hcr-layout-gap);
+    min-width: 0;
+    align-items: start;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community > .content > main.list,
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .hb-cpt__scroll-list.hb-bbs-home {
+    display: contents;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__topic-list-wrapper {
+    position: sticky;
+    top: 72px;
+    z-index: 8;
+    grid-column: 1;
+    grid-row: 1;
+    box-sizing: border-box;
+    width: var(--hcr-dock-width);
+    height: calc(100vh - 88px);
+    max-height: calc(100vh - 88px);
+    padding: 38px 5px 8px;
+    overflow: hidden;
+    border: 1px solid var(--hcr-border-color);
+    border-radius: var(--hcr-radius-panel);
+    background: var(--hcr-surface);
+    box-shadow: var(--hcr-shadow-card);
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__topic-list-wrapper::before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: var(--hcr-text);
+    font-size: 14px;
+    font-weight: 650;
+    content: '社区';
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community [data-hcr-dock-toggle] {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    display: inline-grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: var(--hcr-radius-control);
+    background: transparent;
+    color: var(--hcr-text-muted);
+    font-size: 21px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community [data-hcr-dock-toggle]:hover {
+    background: var(--hcr-surface-hover);
+    color: var(--hcr-text);
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__topic-list,
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .hb-cpt__pagination-outer {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .hb-cpt__pagination-outer {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .hb-cpt__pagination-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community button.bbs-home__topic-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 40px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 0;
+    padding: 6px 8px;
+    overflow: hidden;
+    border-radius: var(--hcr-radius-small);
+    color: var(--hcr-text-muted);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community button.bbs-home__topic-item:hover {
+    background: var(--hcr-surface-hover);
+    color: var(--hcr-text);
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community button.bbs-home__topic-item:is(.is-active, .is-selected, .active, .bbs-home__topic-item--active, [aria-current='page'], [aria-pressed='true']) {
+    border-left: 3px solid currentColor;
+    background: var(--hcr-surface-selected);
+    color: var(--hcr-text);
+    font-weight: 600;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__topic-item-icon {
+    display: block;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+    margin: 0;
+    object-fit: contain;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__topic-name {
+    display: block;
+    min-width: 0;
+    flex: 1 1 auto;
+    margin: 0;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    text-overflow: ellipsis;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__content-list {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community > .content > .right {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock.hcr-dock-collapsed #page-bbs-community .bbs-home__topic-list-wrapper {
+    padding-inline: 5px;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock.hcr-dock-collapsed #page-bbs-community .bbs-home__topic-list-wrapper::before,
+  html.hcr-enabled.hcr-home.hcr-left-community-dock.hcr-dock-collapsed #page-bbs-community .bbs-home__topic-name {
+    width: 0;
+    flex: 0 0 0;
+    opacity: 0;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock.hcr-dock-collapsed #page-bbs-community button.bbs-home__topic-item {
+    justify-content: center;
+    padding-inline: 5px;
+  }
+}
+
+@media (min-width: 840px) and (max-width: 1359px) {
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community {
+    --hcr-dock-width: 60px;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__topic-list-wrapper {
+    padding-inline: 5px;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__topic-list-wrapper::before,
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__topic-name {
+    width: 0;
+    flex: 0 0 0;
+    opacity: 0;
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community button.bbs-home__topic-item {
+    justify-content: center;
+    padding-inline: 5px;
+  }
+}
+
+@media (min-width: 840px) and (max-width: 1080px) {
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community > .content {
+    grid-template-columns: var(--hcr-dock-width) minmax(0, 1fr);
+  }
+
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community > .content > .right {
+    display: none;
+  }
+}
+
+@media (min-width: 1081px) and (max-width: 1359px) {
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community {
+    --hcr-right-width: 280px;
+  }
+}
+
+@media (min-width: 1081px) {
+  /* The live site constrains the direct page parent to 1300px. Widen that
+   * route-scoped shell first; otherwise a percentage width on the page root
+   * can never reach the requested desktop measure. */
+  html.hcr-enabled:is(.hcr-home, .hcr-post) #app > main {
+    width: 100%;
+    max-width: none;
+    background: var(--hcr-page-bg);
+  }
+
+  html.hcr-enabled.hcr-home #page-bbs-community {
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    max-width: var(--hcr-layout-max);
+    margin-inline: auto;
+  }
+
+  /* The native feed rail supplies 16px horizontal spacing. It is not a
+   * visual panel: cards own the white surface, border, shadow and radius. */
+  html.hcr-enabled.hcr-home.hcr-left-community-dock #page-bbs-community .bbs-home__content-list {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link {
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-block: 16px 28px;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link > .content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--hcr-right-width);
+    gap: var(--hcr-layout-gap);
+    min-width: 0;
+    align-items: start;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link > .content > .list {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    flex: none;
+  }
+
+  html.hcr-enabled.hcr-post #page-bbs-link > .content > .right {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    flex: none;
+  }
+}

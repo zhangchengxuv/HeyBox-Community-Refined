@@ -1,0 +1,43 @@
+# dependencies/build
+node_modules/
+.output/
+.wxt/
+dist/
+coverage/
+*.log
+.tmp-edge-v051*/
+.tmp-edge-v052*/
+.tmp-edge-v053*/
+
+# private original website snapshots / potentially sensitive screenshots
+design/raw/**
+!design/raw/.gitkeep
+design/reference/*.png
+
+# local configuration
+.env
+.env.*
+!.env.example
+
+# WXT / editor artifacts
+stats.html
+stats-*.json
+web-ext.config.ts
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local handoff material superseded by the repository-root project layout
+/HeyBox_Community_Refined_Codex_Kit/
+/HeyBox_Community_Refined_Codex_Kit.zip
+/HeyBox_Header_Promo_Cleanup_v03/
+/HeyBox_Reddit_Dock_v04/
+/HeyBox_Space_Optimization_v05/
+/HeyBox_UI_Redesign_v02/
+/HeyBox_V051_Layout_Repair/

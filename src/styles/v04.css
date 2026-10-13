@@ -1,0 +1,57 @@
+/* v0.4 controls retained by v0.5.1; layout now lives in v05.css. */
+html.hcr-enabled.hcr-compact-header nav.nav .nav-links > .nav-link.nav-link--active {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: inset 0 -2px currentColor;
+}
+
+html.hcr-enabled.hcr-compact-header nav.nav .nav-links > .nav-link.nav-link--active::before,
+html.hcr-enabled.hcr-compact-header nav.nav .nav-links > .nav-link.nav-link--active::after {
+  content: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+html.hcr-enabled.hcr-home .hcr-floating-refresh-button {
+  position: fixed;
+  right: 24px;
+  bottom: var(--hcr-floating-refresh-bottom, 28px);
+  z-index: 18;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--hcr-border);
+  border-radius: 50%;
+  background: var(--hcr-surface);
+  color: var(--hcr-text-muted);
+  box-shadow: var(--hcr-shadow-floating);
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+html.hcr-enabled.hcr-home .hcr-floating-refresh-button:hover {
+  border-color: var(--hcr-border-strong);
+  background: var(--hcr-surface-hover);
+  color: var(--hcr-text);
+  box-shadow: var(--hcr-shadow-floating-hover);
+}
+
+html.hcr-enabled.hcr-home .hcr-floating-refresh-button:focus-visible,
+html.hcr-enabled.hcr-home [data-hcr-dock-toggle]:focus-visible {
+  outline: 2px solid #3367d6;
+  outline-offset: 2px;
+}
+
+@media (max-width: 839px) {
+  html.hcr-enabled.hcr-home .hcr-floating-refresh-button {
+    right: 14px;
+    bottom: var(--hcr-floating-refresh-bottom, 18px);
+    width: 40px;
+    height: 40px;
+  }
+}

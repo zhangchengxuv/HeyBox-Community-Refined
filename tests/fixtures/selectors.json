@@ -1,0 +1,170 @@
+{
+  "context": "OFFLINE SNAPSHOT ONLY, not a live browser verification",
+  "date": "2026-10-13",
+  "routes": {
+    "home": "/app/bbs/home",
+    "post": "/app/bbs/link/<numeric-id> (observed in home links)"
+  },
+  "pages": {
+    "home": {
+      "source_archive": "社区.zip",
+      "source_html": "社区/小黑盒 - 玩家高能聚集地.html",
+      "sha256_html": "071ac4aa754e04914de203f70eadff960858c91411b5a1bdabb9b6834ce7e9f8",
+      "nodes": 1872,
+      "selectors": {
+        "root": {
+          "selector": "#page-bbs-community",
+          "snapshot_count": 1
+        },
+        "search": {
+          "selector": "#page-bbs-community > .bbs-community__search-module",
+          "snapshot_count": 1
+        },
+        "layout": {
+          "selector": "#page-bbs-community > .content",
+          "snapshot_count": 1
+        },
+        "feedColumn": {
+          "selector": "#page-bbs-community > .content > main.list",
+          "snapshot_count": 1
+        },
+        "rightColumn": {
+          "selector": "#page-bbs-community > .content > .right",
+          "snapshot_count": 1
+        },
+        "topicStrip": {
+          "selector": "#page-bbs-community .bbs-home__topic-list-wrapper",
+          "snapshot_count": 1
+        },
+        "topicButton": {
+          "selector": "#page-bbs-community .bbs-home__topic-item",
+          "snapshot_count": 12
+        },
+        "feed": {
+          "selector": "#page-bbs-community .bbs-home__content-list",
+          "snapshot_count": 1
+        },
+        "feedItem": {
+          "selector": "#page-bbs-community .bbs-home__content-item",
+          "snapshot_count": 20
+        },
+        "postLink": {
+          "selector": "#page-bbs-community .hb-cpt__bbs-list-content",
+          "snapshot_count": 20
+        },
+        "postHeader": {
+          "selector": "#page-bbs-community .bbs-list-content__header",
+          "snapshot_count": 20
+        },
+        "postTitle": {
+          "selector": "#page-bbs-community .bbs-content__title",
+          "snapshot_count": 20
+        },
+        "postPreview": {
+          "selector": "#page-bbs-community .bbs-content__content",
+          "snapshot_count": 20
+        },
+        "mediaWrapper": {
+          "selector": "#page-bbs-community .bbs-content__imgs-wrapper",
+          "snapshot_count": 20
+        },
+        "actionBar": {
+          "selector": "#page-bbs-community .bbs-new-style-bottom",
+          "snapshot_count": 20
+        },
+        "likeButton": {
+          "selector": "#page-bbs-community .bbs-new-style-bottom__like",
+          "snapshot_count": 20
+        },
+        "hotCommunities": {
+          "selector": "#page-bbs-community .bbs-community-hot-topic",
+          "snapshot_count": 1
+        },
+        "rightFooter": {
+          "selector": "#page-bbs-community .right-side-default",
+          "snapshot_count": 1
+        }
+      }
+    },
+    "post": {
+      "source_archive": "html.zip",
+      "source_html": "帖子/全世界都知道我们是蓝币仙人.html",
+      "sha256_html": "c8c306b178054af73711c23b7a8e72ea20138f0cfd8e0d8a76497e24eb2f4197",
+      "nodes": 1601,
+      "selectors": {
+        "root": {
+          "selector": "#page-bbs-link",
+          "snapshot_count": 1
+        },
+        "layout": {
+          "selector": "#page-bbs-link > .content",
+          "snapshot_count": 1
+        },
+        "articleColumn": {
+          "selector": "#page-bbs-link > .content > .list",
+          "snapshot_count": 1
+        },
+        "rightColumn": {
+          "selector": "#page-bbs-link > .content > .right",
+          "snapshot_count": 1
+        },
+        "article": {
+          "selector": "#page-bbs-link .hb-bbs-link",
+          "snapshot_count": 1
+        },
+        "richText": {
+          "selector": "#page-bbs-link .hb-bbs-image-text",
+          "snapshot_count": 1
+        },
+        "heroImage": {
+          "selector": "#page-bbs-link .image-text__header-image",
+          "snapshot_count": 1
+        },
+        "bodyWrapper": {
+          "selector": "#page-bbs-link .image-text__container",
+          "snapshot_count": 1
+        },
+        "author": {
+          "selector": "#page-bbs-link .link-section-user",
+          "snapshot_count": 1
+        },
+        "title": {
+          "selector": "#page-bbs-link .link-section-title",
+          "snapshot_count": 1
+        },
+        "body": {
+          "selector": "#page-bbs-link .image-text__content",
+          "snapshot_count": 1
+        },
+        "comments": {
+          "selector": "#page-bbs-link .link-comment",
+          "snapshot_count": 1
+        },
+        "commentList": {
+          "selector": "#page-bbs-link .link-comment__list",
+          "snapshot_count": 1
+        },
+        "commentItem": {
+          "selector": "#page-bbs-link .link-comment__comment-item",
+          "snapshot_count": 20
+        },
+        "commentBody": {
+          "selector": "#page-bbs-link .comment-item__content-container",
+          "snapshot_count": 20
+        },
+        "nestedReplies": {
+          "selector": "#page-bbs-link .link-comment__comment-children",
+          "snapshot_count": 7
+        },
+        "replyBar": {
+          "selector": "#page-bbs-link .hb-bbs-link__reply-target",
+          "snapshot_count": 1
+        },
+        "related": {
+          "selector": "#page-bbs-link .bbs-link__related-recommend",
+          "snapshot_count": 2
+        }
+      }
+    }
+  }
+}

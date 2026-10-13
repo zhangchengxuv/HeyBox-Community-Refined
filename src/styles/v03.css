@@ -1,0 +1,98 @@
+/*
+ * v0.3 is deliberately scoped to active BBS routes. Header items receive an
+ * extension class only after their exact native label is recognised in TS.
+ */
+html.hcr-enabled nav.nav .nav-links > .nav-link.hcr-hidden-nav-item {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  html.hcr-enabled.hcr-compact-header nav.nav > .nav-content {
+    box-sizing: border-box;
+    min-height: 56px;
+    padding-inline: 20px;
+    gap: 24px;
+    align-items: center;
+  }
+
+  html.hcr-enabled.hcr-compact-header nav.nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-width: 0;
+  }
+
+  html.hcr-enabled.hcr-compact-header nav.nav .nav-links > .nav-link {
+    padding-block: 17px;
+    color: var(--hcr-text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  html.hcr-enabled.hcr-compact-header nav.nav .nav-links > .nav-link.nav-link--active {
+    color: var(--hcr-text);
+    font-weight: 650;
+    box-shadow: inset 0 -2px currentColor;
+  }
+
+  html.hcr-enabled.hcr-compact-header nav.nav .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+  }
+}
+
+/*
+ * Hide only the verified product-promotion children. The shared right rail
+ * remains available for hot communities and related recommendations.
+ */
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .right-side-default > .qr-section,
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .right-side-default > .app-links,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .right-side-default > .qr-section,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .right-side-default > .app-links {
+  display: none !important;
+}
+
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .right-side-default,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .right-side-default {
+  min-height: 0;
+  height: auto;
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .right-side-default > .footer-info,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .right-side-default > .footer-info {
+  margin: 0;
+  padding: 0 2px 4px;
+  color: var(--hcr-text-subtle);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .footer-info .footer-row,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .footer-info .footer-row,
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .footer-info .report-text,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .footer-info .report-text,
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .footer-info .copyright-text,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .footer-info .copyright-text {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .footer-info .footer-link,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .footer-info .footer-link {
+  color: inherit;
+}
+
+html.hcr-enabled.hcr-hide-promotions.hcr-home #page-bbs-community .footer-info .spacer,
+html.hcr-enabled.hcr-hide-promotions.hcr-post #page-bbs-link .footer-info .spacer {
+  height: 6px;
+}
